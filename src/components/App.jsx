@@ -16,7 +16,12 @@ function App() {
     function addNote(newNote) {
         //update state variable 'notes' and add a new note 'newNote' at the end
         setNotes(prevNotes => {
-            return [...prevNotes, newNote];
+
+            return [
+                //previous state of 'notes' array
+                ...prevNotes,
+                newNote
+            ];
         });
     }
 
@@ -52,7 +57,6 @@ function App() {
           />
         );
       })}
-      {/*Footer function component */}
       <Footer />
     </div>
     );
